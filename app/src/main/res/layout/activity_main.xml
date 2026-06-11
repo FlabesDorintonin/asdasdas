@@ -1,0 +1,151 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SecureMesh BLE Debug"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Status..."
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/targetNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target BLE name"
+            android:inputType="text"
+            android:text="SecureMesh-GW-A7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/autoConnectCheck"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Auto-connect" />
+
+            <CheckBox
+                android:id="@+id/showAllCheck"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Show all" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/permissionsButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Permissions" />
+            <Button android:id="@+id/startScanButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Start Scan" />
+            <Button android:id="@+id/stopScanButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Stop" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/disconnectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disconnect" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Found BLE devices — tap one to connect"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/deviceListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text="7391" />
+
+        <Button
+            android:id="@+id/authButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auth" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Quick codes"
+            android:textStyle="bold" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/helpButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="HELP" />
+            <Button android:id="@+id/okButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="OK" />
+            <Button android:id="@+id/medicButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="MEDIC" />
+            <Button android:id="@+id/testButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="TEST" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/targetEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target: ALL / 1 / 2 / 3"
+            android:inputType="text"
+            android:text="ALL" />
+
+        <EditText
+            android:id="@+id/messageEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message"
+            android:inputType="text"
+            android:text="HELP" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send custom message" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Log"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/logText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:background="#EEEEEE"
+            android:padding="8dp"
+            android:textIsSelectable="true"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
